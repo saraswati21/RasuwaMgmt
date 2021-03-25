@@ -14,7 +14,7 @@
                     Entry
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Customer</a>
+                    <a class="dropdown-item" href="/addcustomer">Customer</a>
                     <a class="dropdown-item" href="#">Product Entry</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Supplier Entry</a>

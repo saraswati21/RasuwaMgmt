@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\usercontroller;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\customerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +21,10 @@ Route::get('/login', function () {
 
 Route::post("/login",[usercontroller::class,'login']);
 Route::get("/",[ProductController::class,'index']);
+route::view('addcustomer', 'addcustomer');
+route::post('addcustomer', [customerController::class,'addcustomer']);
+route::get('listcustomer', [customerController::class,'listcustomer']);
+route::get('/deletecustomer/{CustomerID}', [customerController::class,'deletecustomer']);
+route::get('/editcustomer/{CustomerID}', [customerController::class,'editcustomer']);
+route::post('editcustomer', [customerController::class,'updatecustomer']);
+
