@@ -15,9 +15,9 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/addcustomer">Customer</a>
-                    <a class="dropdown-item" href="#">Product Entry</a>
+                    <a class="dropdown-item" href="/addproduct">Product Entry</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Supplier Entry</a>
+                    <a class="dropdown-item" href="/addsupplier">Supplier Entry</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -47,7 +47,7 @@
 
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <a  href="#" class="text-dark my-2 my-sm-0" >Logout</a>
+            <a  href="/logout" class="text-dark my-2 my-sm-0" >Logout</a>
         </form>
     </div>
 </nav>

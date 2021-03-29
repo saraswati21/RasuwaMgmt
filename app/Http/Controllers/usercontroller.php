@@ -12,11 +12,17 @@ class usercontroller extends Controller
         $user= User::where(['email'=>$req->email])->first();
         if(!$user || !Hash::check($req->password, $user->Password))
         {
-            return "Username or Password are not matched";
+            return redirect('/login');
         }
         else{
             $req->session()->put('user', $user);
             return redirect('/');
         }
+    }
+    function logout()
+    {
+       session()->remove('user',);
+       return redirect('/login');
+
     }
 }
