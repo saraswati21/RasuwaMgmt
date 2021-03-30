@@ -28,14 +28,14 @@ Route::get("logout",[usercontroller::class,'logout']);
 Route::view("/",'dashboard');
 
 
-route::view('addcustomer', 'addcustomer');
+route::get('addcustomer', [customerController::class,'addnewcustomer']);
 route::post('addcustomer', [customerController::class,'addcustomer']);
 route::get('listcustomer', [customerController::class,'listcustomer']);
 route::get('/deletecustomer/{CustomerID}', [customerController::class,'deletecustomer']);
 route::get('/editcustomer/{CustomerID}', [customerController::class,'editcustomer']);
 route::post('editcustomer', [customerController::class,'updatecustomer']);
 
-route::view('addproduct', 'addproduct');
+route::get('addproduct', [ProductController::class,'addnewproduct']);
 route::post('addproduct', [ProductController::class,'addproduct']);
 route::get('listproduct', [ProductController::class,'listproduct']);
 route::get('/deleteproduct/{ProductID}', [ProductController::class,'deleteproduct']);
@@ -62,6 +62,13 @@ route::get('listproductcategories', [ProductCategoriesController::class,'listpro
 route::get('/deleteproductcategories/{ProductCategoryID}', [ProductCategoriesController::class,'deleteproductcategories']);
 route::get('/editproductcategories/{ProductCategoryID}', [ProductCategoriesController::class,'editproductcategories']);
 route::post('editproductcategories', [ProductCategoriesController::class,'updateproductcategories']);
+
+route::get('adduser', [usercontroller::class,'addnewuser']);
+route::post('adduser', [usercontroller::class,'adduser']);
+route::get('listuser', [usercontroller::class,'listuser']);
+route::get('/deleteuser/{UserID}', [usercontroller::class,'deleteuser']);
+route::get('/edituser/{UserID}', [usercontroller::class,'edituser']);
+route::post('edituser', [usercontroller::class,'updateuser']);
 
 route::view('adduserrole', 'adduserrole');
 route::post('adduserrole', [UserRolesController::class,'adduserrole']);

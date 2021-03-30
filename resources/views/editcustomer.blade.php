@@ -22,8 +22,12 @@
                 <input type="text" class="form-control" id="inputRemarks"  value="{{$data->remarks}}" name="Remarks" placeholder="Remarks">
             </div>
             <div class="col-12">
-                <label for="CustomerTypeID" class="form-label">Customer Type ID</label>
-                <input type="text" class="form-control" id="CustomerTypeID" value="{{$data->CustomerTypeID}}" name="CustomerTypeID" placeholder="Customer Type ID">
+                <label for="CustomerTypeID" class="form-label">Customer Type</label>
+                <select name="CustomerTypeID" id="CustomerTypeID" class="form-control">
+                    @foreach($catdata as $item)
+                        <option value="{{$item->CustomerTypeID}}" {{$item->CustomerTypeID == $data->CustomerTypeID ? 'selected' :''}}>{{$item->CustomerTypeName}}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="col-12 mt-3">
                 <button type="submit" class="btn btn-primary">Save</button>

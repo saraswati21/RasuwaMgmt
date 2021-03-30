@@ -2,15 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\customertype;
 use Illuminate\Http\Request;
 use App\Models\customer;
 use Session;
+use Illuminate\Support\Facades\DB;
 class customerController extends Controller
 {
     function listcustomer(){
-        $data = customer::all();
-        return view('listcustomer',["data"=>$data]);
+        $data = DB::table('customers')
+            ->join('customertypes', 'customers.CustomerTypeID','=', 'customertypes.CustomerTypeID')
+            ->select('customers.*','customertypes.CustomerTypeName')
+            ->get();
+
+        return view('listcustomer',['data'=>$data]);
     }
+
+    function addnewcustomer()
+    {
+        $data= customertype::all();
+        return view('addcustomer',['data'=>$data]);
+    }
+
     function addcustomer(Request $req)
     {
         //return $req->input();
@@ -32,10 +45,13 @@ class customerController extends Controller
         Session::flash('status', 'Customer Delete Successfully');
         return redirect('listcustomer');
     }
+
+
     function editcustomer($CustomerID)
     {
         $data= customer::find($CustomerID);
-        return view('editcustomer',['data'=>$data]);
+        $catdata = customertype::all();
+        return view('editcustomer',['data'=>$data, 'catdata'=>$catdata]);
     }
     function updatecustomer(Request $req)
     {

@@ -9,10 +9,16 @@
                 <label for="ProductName" class="form-label">Product Name</label>
                 <input type="text" class="form-control" id="ProductName" value="{{$data->ProductName}}" name="ProductName" placeholder="Product Name">
             </div>
+
             <div class="col-12">
-                <label for="productCategoryID" class="form-label">Product Category ID</label>
-                <input type="text" class="form-control" id="productCategoryID" value="{{$data->productCategoryID}}" name="productCategoryID" placeholder="Product Category ID">
+                <label for="productCategoryID" class="form-label">Product Categories</label>
+                <select name="productCategoryID" id="productCategoryID" class="form-control">
+                    @foreach($catdata as $item)
+                        <option value="{{$item->productCategoryID}}" {{$item->productCategoryID == $data->productCategoryID ? 'selected' :''}}>{{$item->productCategoryName}}</option>
+                    @endforeach
+                </select>
             </div>
+
             <div class="col-12">
                 <label for="inputUnit" class="form-label">Unit </label>
                 <input type="text" class="form-control" id="inputUnit" value="{{$data->Unit}}" name="Unit" placeholder="Unit">

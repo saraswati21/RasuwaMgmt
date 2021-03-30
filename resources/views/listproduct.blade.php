@@ -12,7 +12,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Product Name</th>
-                <th scope="col">product Category</th>
+                <th scope="col">Category</th>
                 <th scope="col">Unit</th>
                 <th scope="col">Selling Price</th>
                 <th scope="col">Cost Price</th>
@@ -24,7 +24,7 @@
                 <tr>
                     <th scope="row">{{$item->ProductID}}</th>
                     <td>{{$item->ProductName}}</td>
-                    <td>{{$item->productCategoryID}}</td>
+                    <td>{{$item->productCategoryName}}</td>
                     <td>{{$item->Unit}}</td>
                     <td>{{$item->SellingPrice}}</td>
                     <td>{{$item->CostPrice}}</td>

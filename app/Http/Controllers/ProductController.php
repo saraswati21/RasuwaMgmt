@@ -2,15 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\productcategories;
 use Illuminate\Http\Request;
 use App\Models\product;
 use Session;
+use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
     function listproduct()
     {
-        $data = product::all();
+        $data = DB::table('products')
+            ->join('productcategories', 'products.productCategoryID','=', 'productcategories.productCategoryID')
+            ->select('products.*','productcategories.productCategoryName')
+            ->get();
         return view('listproduct',["data"=>$data]);
+    }
+
+    function addnewproduct()
+    {
+        $data= productcategories::all();
+        return view('addproduct',['data'=>$data]);
     }
 
     function addproduct(Request $req)
@@ -38,7 +49,8 @@ class ProductController extends Controller
     function editproduct($ProductID)
     {
         $data= product::find($ProductID);
-        return view('editproduct',['data'=>$data]);
+        $catdata = productcategories::all();
+        return view('editproduct',['data'=>$data, 'catdata'=>$catdata]);
     }
 
     function updateproduct(Request $req)

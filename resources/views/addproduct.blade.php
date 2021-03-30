@@ -8,8 +8,12 @@
                 <input type="text" class="form-control" id="inputProductName" name="ProductName" placeholder="Product Name">
             </div>
             <div class="col-12">
-                <label for="inputproductCategoryID" class="form-label">Product Category ID</label>
-                <input type="text" class="form-control" id="inputproductCategoryID" name="productCategoryID" placeholder="Product Category ID">
+                <label for="inputproductCategoryName" class="form-label">Product Categories</label>
+                <select name="inputproductCategoryName" id="productCategoryName" class="form-control">
+                    @foreach($data as $item)
+                        <option value="{{$item->productCategoryID}}">{{$item->productCategoryName}}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="col-12">
                 <label for="inputUnit" class="form-label">Unit </label>

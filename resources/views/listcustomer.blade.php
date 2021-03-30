@@ -27,7 +27,8 @@
                 <td>{{$item->Address}}</td>
                 <td>{{$item->Telephone}}</td>
                 <td>{{$item->remarks}}</td>
-                <td>{{$item->CustomerTypeID}}</td>
+                <td >{{$item->CustomerTypeName}}</td>
+
                 <td><a href="editcustomer/{{$item->CustomerID}}"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
                 <td><a href="deletecustomer/{{$item->CustomerID}}"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
             </tr>
