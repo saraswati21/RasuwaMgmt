@@ -11,7 +11,7 @@
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Supplier Name</th>
+                <th scope="col">Account Name</th>
                 <th scope="col">Address</th>
                 <th scope="col">Telephone</th>
                 <th scope="col">Remarks</th>
@@ -21,13 +21,13 @@
             <tbody>
             @foreach($data as $item)
                 <tr>
-                    <th scope="row">{{$item->SupplierID}}</th>
-                    <td>{{$item->SupplierName}}</td>
+                    <th scope="row">{{$item->AccountID}}</th>
+                    <td>{{$item->AccountName}}</td>
                     <td>{{$item->Address}}</td>
                     <td>{{$item->Telephone}}</td>
                     <td>{{$item->remarks}}</td>
-                    <td><a href="editsupplier/{{$item->SupplierID}}"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
-                    <td><a href="deletesupplier/{{$item->SupplierID}}"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                    <td><a href="editaccount/{{$item->AccountID}}"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+                    <td><a href="deleteaccount/{{$item->AccountID}}"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                 </tr>
             @endforeach
             </tbody>

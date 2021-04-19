@@ -16,6 +16,7 @@
                 <th scope="col">Unit</th>
                 <th scope="col">Selling Price</th>
                 <th scope="col">Cost Price</th>
+                <th scope="col">Stock</th>
                 <th colspan="2">Action</th>
             </tr>
             </thead>
@@ -28,6 +29,7 @@
                     <td>{{$item->Unit}}</td>
                     <td>{{$item->SellingPrice}}</td>
                     <td>{{$item->CostPrice}}</td>
+                    <td>{{$item->ProductStock}}</td>
                     <td><a href="editproduct/{{$item->ProductID}}"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
                     <td><a href="deleteproduct/{{$item->ProductID}}"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                 </tr>

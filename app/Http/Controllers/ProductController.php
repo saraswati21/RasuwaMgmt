@@ -33,6 +33,7 @@ class ProductController extends Controller
         $cust->Unit = $req->input('Unit');
         $cust->SellingPrice=$req->input('SellingPrice');
         $cust->CostPrice=$req->input('CostPrice');
+        $cust->ProductStock='0.00';
         $cust->save();
         $req->session()->flash('status', 'Product Added Successfully');
         return redirect('listproduct');

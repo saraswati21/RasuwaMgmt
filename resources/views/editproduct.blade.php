@@ -30,6 +30,7 @@
             <div class="col-12">
                 <label for="inputCostPrice" class="form-label">Cost Price</label>
                 <input type="text" class="form-control" id="inputCostPrice"  value="{{$data->CostPrice}}" name="CostPrice" placeholder="Cost Price">
+
             </div>
             <div class="col-12 mt-3">
                 <button type="submit" class="btn btn-primary">Save</button>

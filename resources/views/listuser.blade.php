@@ -14,7 +14,7 @@
                 <th scope="col">User Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Password</th>
-                <th scope="col">User Role ID</th>
+                <th scope="col">User Roles</th>
                 <th colspan="2">Action</th>
             </tr>
             </thead>

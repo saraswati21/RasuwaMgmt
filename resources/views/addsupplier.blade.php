@@ -1,11 +1,11 @@
 @extends('master')
 @section('content')
     <div class="container my-3">
-        <form class="row" action="addsupplier" method="post">
+        <form class="row" action="addaccount" method="post">
             <div>@csrf</div>
             <div class="col-12">
-                <label for="SupplierName" class="form-label">Supplier Name</label>
-                <input type="text" class="form-control" id="SupplierName" name="SupplierName" placeholder="Supplier Name">
+                <label for="accountName" class="form-label">account Name</label>
+                <input type="text" class="form-control" id="accountName" name="accountName" placeholder="account Name">
             </div>
             <div class="col-12">
                 <label for="inputAddress" class="form-label">Address</label>

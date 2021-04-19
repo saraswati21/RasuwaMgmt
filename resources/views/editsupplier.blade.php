@@ -1,13 +1,13 @@
 @extends('master')
 @section('content')
     <div class="container my-3">
-        <h1>Edit Supplier</h1>
-        <form class="row" action="/editsupplier" method="post">
+        <h1>Edit account</h1>
+        <form class="row" action="/editaccount" method="post">
             <div>@csrf</div>
-            <input type="hidden" value="{{$data->SupplierID}}" name="SupplierID">
+            <input type="hidden" value="{{$data->AccountID}}" name="AccountID">
             <div class="col-12">
-                <label for="SupplierName" class="form-label">Supplier Name</label>
-                <input type="text" class="form-control" id="SupplierName" value="{{$data->SupplierName}}" name="SupplierName" placeholder="Supplier Name">
+                <label for="AccountName" class="form-label">Account Name</label>
+                <input type="text" class="form-control" id="AccountName" value="{{$data->AccountName}}" name="AccountName" placeholder="Account Name">
             </div>
             <div class="col-12">
                 <label for="inputTelephone" class="form-label">Telephone </label>

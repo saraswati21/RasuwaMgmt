@@ -9,7 +9,7 @@
             </div>
             <div class="col-12">
                 <label for="inputproductCategoryName" class="form-label">Product Categories</label>
-                <select name="inputproductCategoryName" id="productCategoryName" class="form-control">
+                <select name="productCategoryID" id="productCategoryName" class="form-control">
                     @foreach($data as $item)
                         <option value="{{$item->productCategoryID}}">{{$item->productCategoryName}}</option>
                     @endforeach
@@ -26,7 +26,7 @@
             <div class="col-12">
                 <label for="inputCostPrice" class="form-label">Cost Price</label>
                 <input type="text" class="form-control" id="inputCostPrice" name="CostPrice" placeholder="Cost Price">
-            </div>
+               </div>
             <div class="col-12 mt-3">
                 <button type="submit" class="btn btn-primary">Save</button>
             </div>
